@@ -16,7 +16,7 @@ class Tables extends Model
 {
     public function restaurants()
     {
-        return $this->belongsTo(Restaurants::class,'restaurants_id');
+        return $this->belongsTo(Restaurant::class,'restaurants_id');
     }
 
     public function booking()
