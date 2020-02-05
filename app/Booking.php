@@ -14,5 +14,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
-    //
+    public function users()
+    {
+        return $this->belongsTo(User::class,'users_id');
+    }
+
+    public function tables()
+    {
+        return $this->belongsTo(TAbles::class,'tables_id');
+    }
 }
