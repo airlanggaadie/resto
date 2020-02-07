@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\UserController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,3 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/user','UserController@index');
+// Route::get('/user/create','UserController@create');
+Route::post('/user/create','UserController@store');
+Route::post('/user/store','UserController@store');
+Route::get('/user/edit/{id}','UserController@edit');
+Route::put('/user/edit/{id}','UserController@update');
+Route::delete('/user/delete/{id}','UserController@destroy');
