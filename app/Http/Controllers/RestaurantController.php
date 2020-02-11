@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Restaurant;
 
 class RestaurantController extends Controller
 {
@@ -34,7 +35,12 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $resto = new Restaurant();
+        $resto->restaurant_name = $request->get('name');
+        $resto->address = $request->get('address');
+        $resto->phone_number = $request->get('phonenumber');
+
+        $resto->save();
     }
 
     /**
@@ -45,7 +51,8 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
-        //
+        $resto = Restaurant::find($id);
+        return response()-> json($resto);
     }
 
     /**
@@ -68,7 +75,13 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $resto = Restaurant::find($id);
+        $resto->restaurants_name = $request->get('name');
+        $resto->address = $request->get('address');
+        $resto->phone_number = $request->get('phonenumber');
+
+        $resto->save();
+        return response()->json();
     }
 
     /**
@@ -79,6 +92,10 @@ class RestaurantController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $resto = Restaurant::find($id);
+        $resto->delete();
+        return response()->json([
+            'status' => 'data has been deleted'
+        ]);
     }
 }

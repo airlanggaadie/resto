@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Booking;
 
 class BookingController extends Controller
 {
@@ -13,7 +14,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        //
+        $booking = Booking::with('users')->get();
+        return response()->json($booking);
     }
 
     /**
@@ -34,7 +36,11 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $booking = new Booking();
+        $booking->users_id = $request->get('users_id');
+        $booking->tables_id = $request->get('tables_id');
+        $booking->check_in = $request->get('check_in');
+        $booking->time = $request->get('time');
     }
 
     /**
@@ -45,7 +51,8 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-        //
+        $booking = Booking::find($id);
+        return response()->json($booking);
     }
 
     /**
@@ -79,6 +86,11 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $booking = Booking::find($id);
+        $booking->delete();
+
+        return response()->json([
+            'status' => 'data has been deleted'
+        ]);
     }
 }
