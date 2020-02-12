@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('user')->group(function(){
-    Route::get('/','UserController@index');
+    Route::get('/','UserController@index')->middleware(['role:administrator']);
     Route::get('/user/create','UserController@create');
     // Route::post('/create','UserController@store');
     Route::post('/store','UserController@store');
