@@ -44,3 +44,4 @@ Route::post('resto/create','RestaurantController@store');
 Route::get('resto/show/{id}','RestaurantController@show');
 Route::post('resto/update/{id}','RestaurantController@update');
 Route::delete('resto/delete/{id}','RestaurantController@destroy');
+Route::get('/menu', 'MenuController@index');
