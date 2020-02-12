@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
+    protected $booking = 'booking';
+
     public function users()
     {
         return $this->belongsTo(User::class,'users_id');

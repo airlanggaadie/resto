@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tables;
 
 class TablesController extends Controller
 {
@@ -13,7 +14,8 @@ class TablesController extends Controller
      */
     public function index()
     {
-        //
+        $tables = Tables::with('restaurants')->get();
+        return response()->json($tables);
     }
 
     /**
@@ -34,7 +36,12 @@ class TablesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tables = new Tables();
+        $tables->restaurant_id = $request->get('restaurants_id');
+        $tables->name = $request->get('name');
+        $tables->description = $request->get('description');
+        
+        $tables->save();
     }
 
     /**
@@ -45,7 +52,8 @@ class TablesController extends Controller
      */
     public function show($id)
     {
-        //
+        $tables = Tables::find($id);
+        return response()->json($tables);
     }
 
     /**
@@ -68,7 +76,12 @@ class TablesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tables = Tables::find($id);
+        $tables->table_name = $request->get('name');
+        $tables->description = $request->get('description');
+
+        $tables->save();
+        return response()->json();
     }
 
     /**
@@ -79,6 +92,10 @@ class TablesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tables = Tables::find($id);
+        $tables->delete();
+        return response()->json([
+            'status' => 'data has been deleted'
+        ]);
     }
 }

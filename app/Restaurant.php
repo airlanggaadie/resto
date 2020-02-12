@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Restaurant extends Model
 {
+    protected $resto = 'restaurant';
+
     public function tables()
     {
         return $this->HasMany(Tables::class,'restaurants_id','id');
