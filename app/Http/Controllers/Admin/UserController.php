@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    private $repo;
+
+    public function __construct(UserRepository $user) {
+        $this->repo = $user;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,9 +21,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $repo = new UserRepository();
-        $user = $repo->getAll();
-        return view('user.index', compact('user'));
+        $user = $this->repo->getAllPaginate();
+        return view('pages.admin.user.index', compact('user'));
     }
 
     /**
@@ -29,7 +33,7 @@ class UserController extends Controller
     public function create()
     {
         $user = null;
-        return view('user.form',compact('user'));
+        return view('pages.admin.user.form',compact('user'));
     }
 
     /**
@@ -40,13 +44,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $repo = new UserRepository();
-        $user = $repo->insert([
+        $user = $this->repo->insert([
             'name' => $request->get('name'),
             'phonenumber' => $request->get('phonenumber'),
             'gender' => $request->get('gender'),
             'email' => $request->get('email'),
-            // 'email_verified_at' => $request->get('email_verified_at'),
             'password' => $request->get('password'),
         ]);
             
@@ -72,9 +74,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $repo = new RoomRepository();
-        $room = $repo->show($id);
-        return view('Room.form',compact('room'));
+        $user = $this->repo->show($id);
+        return view('pages.admin.user.form',compact('user'));
     }
 
     /**
@@ -86,11 +87,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $repo = new RoomRepository();
-        $room = $repo->update($id,[
-            'name'=>$request->get('name')
+        $user = $this->repo->update($id,[
+            'name'=>$request->get('name'),
+            'phonenumber'=>$request->get('phonenumber'),
+            'gender'=>$request->get('gender'),
+            'email'=>$request->get('email'),
+            'password'=>$request->get('password')
         ]);
-        return redirect('room');
+        return redirect('user');
     }
 
     /**
@@ -101,8 +105,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $room = Room::findOrFail($id);
-        $room->delete();
-        return redirect('room');
+        $this->repo->delete($id);
+        return redirect('user');
     }
 }

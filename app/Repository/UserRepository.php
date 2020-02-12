@@ -44,4 +44,12 @@ class UserRepository
         $user->save();
         return $user;
     }
+
+    public function delete($id)
+    {
+        $user = User::findOrFail($id);
+        // $user->detachRole();
+        $user->delete();
+        return $user;
+    }
 }

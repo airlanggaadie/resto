@@ -17,18 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('user')->group(function(){
+Route::prefix('user')->namespace('Admin')->group(function(){
     Route::get('/','UserController@index')->middleware(['role:administrator']);
-    Route::get('/user/create','UserController@create');
-    // Route::post('/create','UserController@store');
-    Route::post('/store','UserController@store');
-    Route::get('/edit/{id}','UserController@edit');
-    Route::put('/edit/{id}','UserController@update');
-    Route::delete('/delete/{id}','UserController@destroy');
+    Route::get('create','UserController@create');
+    Route::post('store','UserController@store');
+    Route::get('edit/{id}','UserController@edit');
+    Route::put('edit/{id}','UserController@update');
+    Route::delete('delete/{id}','UserController@destroy');
 });
 
 Route::post('tables/create','TablesController@store');

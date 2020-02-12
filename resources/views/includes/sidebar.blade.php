@@ -9,16 +9,16 @@
       </a></div>
     <div class="sidebar-wrapper">
       <ul class="nav">
-        <li class="nav-item active  ">
-          <a class="nav-link" href="./dashboard.html">
+        <li class="nav-item @yield('dashboard')">
+          <a class="nav-link" href="{{ url('backend') }}">
             <i class="material-icons">dashboard</i>
             <p>Dashboard</p>
           </a>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./user.html">
+        <li class="nav-item @yield('user')">
+          <a class="nav-link" href="{{ url('/user') }}">
             <i class="material-icons">person</i>
-            <p>User Profile</p>
+            <p>List User</p>
           </a>
         </li>
         <li class="nav-item ">
