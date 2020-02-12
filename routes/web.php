@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -32,3 +32,8 @@ Route::post('resto/create','RestaurantController@store');
 Route::get('resto/show/{id}','RestaurantController@show');
 Route::post('resto/update/{id}','RestaurantController@update');
 Route::delete('resto/delete/{id}','RestaurantController@destroy');
+
+
+Route::prefix('backend')->namespace('Admin')->group(function(){
+    Route::get('/','DashboardController@index')->name('dashboard');
+});
