@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         $repo = new UserRepository();
         $user = $repo->getAll();
-        return view('User.index', compact('user'));
+        return view('user.index', compact('user'));
     }
 
     /**
@@ -28,7 +28,7 @@ class UserController extends Controller
     public function create()
     {
         $user = null;
-        return view('User.form',compact('user'));
+        return view('user.form',compact('user'));
     }
 
     /**

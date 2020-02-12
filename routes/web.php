@@ -23,7 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('user')->group(function(){
     Route::get('/','UserController@index');
-    Route::post('/create','UserController@store');
+    Route::get('/user/create','UserController@create');
+    // Route::post('/create','UserController@store');
     Route::post('/store','UserController@store');
     Route::get('/edit/{id}','UserController@edit');
     Route::put('/edit/{id}','UserController@update');
