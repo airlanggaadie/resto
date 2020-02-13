@@ -16,7 +16,9 @@ class TablesController extends Controller
     public function index()
     {
         $tables = Tables::with('restaurants')->get();
-        return response()->json($tables);
+        // return response()->json($tables);
+        return view  ('pages.admin.table.table');
+
     }
 
     /**

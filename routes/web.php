@@ -21,32 +21,36 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('user')->namespace('Admin')->group(function(){
-    Route::get('/','UserController@index')->middleware(['role:administrator']);
-    Route::get('create','UserController@create');
-    Route::post('store','UserController@store');
-    Route::get('edit/{id}','UserController@edit');
-    Route::put('edit/{id}','UserController@update');
-    Route::delete('delete/{id}','UserController@destroy');
-});
-
-Route::post('tables/create','TablesController@store');
-Route::get('tables/show/{id}','TablesController@show');
-Route::post('tables/update/{id}','TablesController@update');
-Route::delete('tables/delete/{id}','TablesController@destroy');
-
-Route::post('booking/create','BookingController@store');
-Route::get('booking/show/{id}','BookingController@show');
-Route::delete('booking/delete/{id}','BookingController@destroy');
-
-Route::post('resto/create','RestaurantController@store');
-Route::get('resto/show/{id}','RestaurantController@show');
-Route::post('resto/update/{id}','RestaurantController@update');
-Route::delete('resto/delete/{id}','RestaurantController@destroy');
-
-Route::get('/menu', 'MenuController@index');
-
-
-Route::prefix('backend')->namespace('Admin')->group(function(){
+Route::prefix('admin')->namespace('Admin')->group(function(){
     Route::get('/','DashboardController@index')->name('dashboard');
+    Route::get('user','UserController@index');
+    Route::get('user/create','UserController@create');
+    Route::post('user/store','UserController@store');
+    Route::get('user/edit/{id}','UserController@edit');
+    Route::put('user/edit/{id}','UserController@update');
+    Route::delete('user/delete/{id}','UserController@destroy');
+
+    Route::get('tables','TablesController@index');
+    Route::post('tables/create','TablesController@store');
+    Route::get('tables/show/{id}','TablesController@show');
+    Route::post('tables/update/{id}','TablesController@update');
+    Route::delete('tables/delete/{id}','TablesController@destroy');
+
+    Route::post('booking/create','BookingController@store');
+    Route::get('booking/show/{id}','BookingController@show');
+    Route::delete('booking/delete/{id}','BookingController@destroy');
+
+
+    Route::post('resto/create','RestaurantController@store');
+    Route::get('resto/show/{id}','RestaurantController@show');
+    Route::post('resto/update/{id}','RestaurantController@update');
+    Route::delete('resto/delete/{id}','RestaurantController@destroy');
+
+    Route::get('/menu', 'MenuController@index');
+
+
+// Route::prefix('backend')->namespace('Admin')->group(function(){
+  
+    // Route::get('/login','DashboardController@index')->('login');
 });
+// ->middleware(['role:administrator'])
