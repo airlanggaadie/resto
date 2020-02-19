@@ -19,4 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/menu', 'MenuController@index');
+// Route::get('/menu', 'MenuController@index')->name('menu');
+
+Route::prefix('admin')->namespace('Admin')->group(function(){
+    Route::get('/menu','MenuController@index')->name('menu');
+
+});
