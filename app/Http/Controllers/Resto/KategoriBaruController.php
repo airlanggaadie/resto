@@ -14,7 +14,7 @@ class KategoriBaruController extends Controller
      */
     public function index()
     {
-        return view('pages.resto.tambah-menu.kategoribaru');
+        return view('pages.resto.tambah-menu.kategori-baru.kategoribaru');
     }
 
     /**

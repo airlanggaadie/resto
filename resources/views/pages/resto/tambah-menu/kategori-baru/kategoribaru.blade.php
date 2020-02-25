@@ -1,4 +1,4 @@
-@extends('layouts.resto.tambah-menu.kategoribaru')
+@extends('layouts.resto.tambah-menu.kategori-baru.kategoribaru')
 
 @section('title', 'Tambah Kategori Baru')
     

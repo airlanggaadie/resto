@@ -14,7 +14,7 @@ class HidanganBaruController extends Controller
      */
     public function index()
     {
-        return view('pages.resto.tambah-menu.hidanganbaru');
+        return view('pages.resto.tambah-menu.hidangan-baru.hidanganbaru');
     }
 
     /**
