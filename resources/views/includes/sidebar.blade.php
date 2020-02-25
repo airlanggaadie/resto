@@ -47,7 +47,7 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pengaturan Menu</h6>
-                <a class="collapse-item" href="utilities-color.html">Tambah Hidangan Baru</a>
+                <a class="collapse-item" href=" {{ route('hidanganbaru') }} ">Tambah Hidangan Baru</a>
                 <a class="collapse-item" href="utilities-border.html">Tambah Kategori Baru</a>
                 <a class="collapse-item" href="utilities-border.html">Opsi Hidangan</a>
             </div>
