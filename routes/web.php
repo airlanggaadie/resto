@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.resto.dashboard');
 });
 
 Auth::routes();
@@ -23,5 +23,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->namespace('Admin')->group(function(){
     Route::get('/menu','MenuController@index')->name('menu');
+
+});
+
+Route::prefix('resto')->namespace('Resto')->group(function(){
+    Route::get('/','DashboardController@index')->name('dashboard');
+    Route::get('/hidangan','HidanganController@index')->name('hidangan');
 
 });
