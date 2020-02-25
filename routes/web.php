@@ -30,5 +30,6 @@ Route::prefix('resto')->namespace('Resto')->group(function(){
     Route::get('/','DashboardController@index')->name('dashboard');
     Route::get('/hidangan','HidanganController@index')->name('hidangan');
     Route::get('/hidangan-baru','HidanganBaruController@index')->name('hidanganbaru');
+    Route::get('/kategori-baru','KategoriBaruController@index')->name('kategoribaru');
 
 });

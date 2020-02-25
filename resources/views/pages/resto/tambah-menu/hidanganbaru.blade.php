@@ -6,7 +6,7 @@
 
 <cimiko>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-8">
                 <div class="row mb-3">
                     <div class="col-4">
