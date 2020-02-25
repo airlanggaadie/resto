@@ -1,0 +1,15 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+
+img{
+    box-shadow: 0px 4px 4px 2px grey;
+}
+
+.cart{
+    background-color: gold;
+    height: 100vh;
+    position: fixed;
+    margin-left: 60%;
+}
