@@ -1,4 +1,4 @@
-@extends('layouts.resto.dashboard')
+@extends('layouts.resto.admin')
 
 @section('title', 'Dashboard')
     
