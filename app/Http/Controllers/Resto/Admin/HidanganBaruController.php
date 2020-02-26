@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Resto;
+namespace App\Http\Controllers\Resto\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class DashboardController extends Controller
+class HidanganBaruController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('pages.resto.dashboard');
+        return view('pages.resto.tambah-menu.hidangan-baru.hidanganbaru');
     }
 
     /**

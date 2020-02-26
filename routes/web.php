@@ -11,6 +11,7 @@
 |
 */
 
+use App\http\Controllers\Resto\Home;
 use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
@@ -57,10 +58,18 @@ Route::prefix('admin')->namespace('Admin')->group(function(){
 
 });
 
-Route::prefix('resto')->namespace('Resto')->group(function(){
-    Route::get('/','DashboardController@index')->name('dashboard');
-    Route::get('/hidangan','HidanganController@index')->name('hidangan');
-    Route::get('/hidangan-baru','HidanganBaruController@index')->name('hidanganbaru');
-    Route::get('/kategori-baru','KategoriBaruController@index')->name('kategoribaru');
 
+
+Route::prefix('resto')->namespace('Resto')->group(function(){
+    Route::get('/','HomeController@index')->name('home');
+    
+    Route::prefix('admin')->namespace('Admin')->group(function(){
+        Route::get('/','DashboardController@index')->name('dashboard');
+        Route::get('/hidangan','HidanganController@index')->name('hidangan');
+        Route::get('/hidangan-baru','HidanganBaruController@index')->name('hidanganbaru');
+        Route::get('/kategori-baru','KategoriBaruController@index')->name('kategoribaru');
+    });
 });
+
+
+Route::get('/dolar','Resto\Home\HomeController@index');

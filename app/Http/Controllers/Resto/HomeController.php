@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Resto;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class KategoriBaruController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class KategoriBaruController extends Controller
      */
     public function index()
     {
-        return view('pages.resto.tambah-menu.kategori-baru.kategoribaru');
+        return view('pages.resto.home.indonesia');
+        // return view('pages.resto.home.indonesia');
     }
 
     /**
