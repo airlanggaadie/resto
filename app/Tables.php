@@ -14,5 +14,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tables extends Model
 {
-    //
+    public function restaurants()
+    {
+        return $this->belongsTo(Restaurant::class,'restaurants_id');
+    }
+
+    public function booking()
+    {
+        return $this->hasMany(Booking::class,'tables_id','id');
+    }
 }

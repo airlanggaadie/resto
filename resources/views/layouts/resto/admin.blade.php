@@ -19,14 +19,14 @@
 <body>
 
     <div id="wrapper">
-        @include('includes.sidebar')
+        @include('includes.resto.sidebar')
 
         <div id="content-wrapper">
-            @include('includes.navbar')
+            @include('includes.resto.navbar')
 
             @yield('content')
 
-            @include('includes.footer')
+            @include('includes.resto.footer')
         </div>
     </div>
     
