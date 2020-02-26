@@ -11,9 +11,6 @@
 |
 */
 
-use App\http\Controllers\Resto\Home;
-use App\Http\Controllers\UserController;
-
 Route::get('/', function () {
     return view('pages.resto.dashboard');
 });
@@ -62,6 +59,7 @@ Route::prefix('admin')->namespace('Admin')->group(function(){
 
 Route::prefix('resto')->namespace('Resto')->group(function(){
     Route::get('/','HomeController@index')->name('home');
+    Route::get('/daftar','DaftarController@index')->name('daftar');
     
     Route::prefix('admin')->namespace('Admin')->group(function(){
         Route::get('/','DashboardController@index')->name('dashboard');
@@ -72,4 +70,4 @@ Route::prefix('resto')->namespace('Resto')->group(function(){
 });
 
 
-Route::get('/dolar','Resto\Home\HomeController@index');
+// Route::get('/dolar','Resto\Home\HomeController@index');

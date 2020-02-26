@@ -32,7 +32,7 @@
                     style="border-radius: 50px; width: 80%;">Login</button>
             </a>
 
-            <p>Belum memiliki akun? <span><a href="#">Daftar</a></span></p>
+            <p>Belum memiliki akun? <span><a href=" {{ route('daftar') }} ">Daftar</a></span></p>
         </div>
         <div class="col-12 text-center justify-content-center">
             <p>Saya telah membaca, memahami, menyetujui <span><a href="#">Ketentuan
