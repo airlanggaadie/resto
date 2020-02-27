@@ -72,6 +72,7 @@ Route::prefix('resto')->namespace('Resto')->group(function(){
         Route::get('/kategori-meja','KategoriMejaController@index')->name('kategorimeja');
         Route::get('/riwayat-meja','RiwayatMejaController@index')->name('riwayatmeja');
         Route::get('/riwayat-pesanan','RiwayatPesananController@index')->name('riwayatpesanan');
+        Route::get('/hubungi-kami','HubungiController@index')->name('hubungikami');
     });
 });
 
