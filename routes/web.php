@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.resto.reservasi');
+    return view('pages.resto.tambah-meja.meja');
 });
 
 Auth::routes();
