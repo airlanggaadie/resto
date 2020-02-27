@@ -20,7 +20,7 @@ class Booking extends Model
     protected $table = 'bookings';
 
     protected $fillable = [
-        'users_id','tables_id','check_in','time','menu_id'
+        'users_id','tables_id','check_in','time','status'
     ];
 
     public function user()
@@ -35,6 +35,6 @@ class Booking extends Model
 
     public function menu()
     {
-        return $this->belongsTo(Menu::class,'menu_id');
+        return $this->belongsToMany(Menu::class,'menu_bookings','booking_id','menu_id');
     }
 }

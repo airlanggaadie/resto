@@ -11,10 +11,15 @@ class Menu extends Model
     use SoftDeletes;
     protected $table = 'menu';
 
-    protected $fillable = ['id_restaurant', 'menu', 'price'];
+    protected $fillable = ['restaurant_id', 'menu', 'price'];
 
     public function restaurant()
     {
-        return $this->BelongsTo(Tables::class,'id_restaurant');
+        return $this->BelongsTo(Tables::class,'restaurant_id');
+    }
+
+    public function booking()
+    {
+        return $this->belongsToMany(Booking::class,'menu_bookings','menu_id','booking_id');
     }
 }
