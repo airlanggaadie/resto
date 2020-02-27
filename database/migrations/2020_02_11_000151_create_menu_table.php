@@ -19,6 +19,7 @@ class CreateMenuTable extends Migration
             $table->integer('id_restaurant');
             $table->string('menu');
             $table->string('price');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
