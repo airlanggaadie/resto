@@ -54,7 +54,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{route('riwayatpesanan')}}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Riwayat Hidangan</span></a>
     </li>
@@ -93,7 +93,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="{{route('riwayatmeja')}}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Riwayat Reservasi</span></a>
     </li>

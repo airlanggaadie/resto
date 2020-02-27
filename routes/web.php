@@ -70,6 +70,8 @@ Route::prefix('resto')->namespace('Resto')->group(function(){
         Route::get('/reservasi','ReservasiMejaController@index')->name('reservasi');
         Route::get('/meja-baru','MejaBaruController@index')->name('mejabaru');
         Route::get('/kategori-meja','KategoriMejaController@index')->name('kategorimeja');
+        Route::get('/riwayat-meja','RiwayatMejaController@index')->name('riwayatmeja');
+        Route::get('/riwayat-pesanan','RiwayatPesananController@index')->name('riwayatpesanan');
     });
 });
 
