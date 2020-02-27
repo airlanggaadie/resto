@@ -38,18 +38,17 @@
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesMenu"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Buat Daftar Menu</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+        <div id="collapseUtilitiesMenu" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pengaturan Menu</h6>
                 <a class="collapse-item" href=" {{ route('hidanganbaru') }} ">Tambah Hidangan Baru</a>
                 <a class="collapse-item" href=" {{ route('kategoribaru') }} ">Tambah Kategori Baru</a>
-                <a class="collapse-item" href="utilities-border.html">Opsi Hidangan</a>
             </div>
         </div>
     </li>
@@ -70,19 +69,19 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+    <a class="nav-link" href="{{ route('reservasi') }}">
             <i class="fas fa-fw fa-folder"></i>
             <span>Reservasi Meja</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesMeja"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Buat Daftar Meja</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+        <div id="collapseUtilitiesMeja" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pengaturan Meja</h6>
@@ -108,12 +107,12 @@
     </div>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesHelp"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Bantuan Kami</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+        <div id="collapseUtilitiesHelp" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Bantuan</h6>

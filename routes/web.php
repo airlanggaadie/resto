@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.resto.dashboard');
+    return view('pages.resto.reservasi');
 });
 
 Auth::routes();
@@ -60,12 +60,14 @@ Route::prefix('admin')->namespace('Admin')->group(function(){
 Route::prefix('resto')->namespace('Resto')->group(function(){
     Route::get('/','HomeController@index')->name('home');
     Route::get('/daftar','DaftarController@index')->name('daftar');
+    Route::get('/login','LoginController@index')->name('login');
     
     Route::prefix('admin')->namespace('Admin')->group(function(){
         Route::get('/','DashboardController@index')->name('dashboard');
         Route::get('/hidangan','HidanganController@index')->name('hidangan');
         Route::get('/hidangan-baru','HidanganBaruController@index')->name('hidanganbaru');
         Route::get('/kategori-baru','KategoriBaruController@index')->name('kategoribaru');
+        Route::get('/reservasi','ReservasiMejaController@index')->name('reservasi');
     });
 });
 

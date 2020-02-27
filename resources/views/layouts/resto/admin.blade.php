@@ -20,12 +20,13 @@
 
     <div id="wrapper">
         @include('includes.resto.sidebar')
-
-        <div id="content-wrapper">
+        
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
             @include('includes.resto.navbar')
 
             @yield('content')
-
+            </div>
             @include('includes.resto.footer')
         </div>
     </div>

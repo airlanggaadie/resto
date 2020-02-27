@@ -4,7 +4,7 @@
     
 @section('content')
 <div class="col-6 text-center">
-    <div class="row mx-3 my-5 bg-light border-primary" style="border-radius: 20px;">
+    <div class="row mx-3 my-5 bg-light border-primary" style="border-radius: 20px; height:85vh;">
         <div class="col-12 img text-center">
             <img src="{{ url('frontend/img/berbaris-1.png') }}" class="my-5" width="30%" alt="Ber-bariS">
         </div>
@@ -27,7 +27,7 @@
                 </select>
             </form>
 
-            <a href="#">
+        <a href="{{ route('login') }}">
                 <button class="btn btn-light border-dark"
                     style="border-radius: 50px; width: 80%;">Login</button>
             </a>
