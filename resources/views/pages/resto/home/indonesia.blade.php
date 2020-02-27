@@ -4,7 +4,7 @@
     
 @section('content')
 <div class="col-6 text-center">
-    <div class="row mx-3 my-5 bg-light border-primary" style="border-radius: 20px;">
+    <div class="row mx-3 my-5 bg-light border-primary" style="border-radius: 20px; height:85vh;">
         <div class="col-12 img text-center">
             <img src="{{ url('frontend/img/berbaris-1.png') }}" class="my-5" width="30%" alt="Ber-bariS">
         </div>
@@ -17,7 +17,7 @@
         <div class="col-12 my-4 text-center">
             <form action="">
                 <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
-                <select name="" id="" style="display: inline-block; width: 200px;">
+                <select class="form-control" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
                     <option value=""><a href="#">Indonesia</a></option>
                     <option value=""><a href="#">Malaysia</a></option>
                     <option value=""><a href="#">Singapore</a></option>
@@ -27,7 +27,7 @@
                 </select>
             </form>
 
-            <a href="#">
+        <a href="{{ route('login') }}">
                 <button class="btn btn-light border-dark"
                     style="border-radius: 50px; width: 80%;">Login</button>
             </a>

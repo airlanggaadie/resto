@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.resto.dashboard');
+    return view('pages.resto.bantuan.hubungi');
 });
 
 Auth::routes();
@@ -60,12 +60,20 @@ Route::prefix('admin')->namespace('Admin')->group(function(){
 Route::prefix('resto')->namespace('Resto')->group(function(){
     Route::get('/','HomeController@index')->name('home');
     Route::get('/daftar','DaftarController@index')->name('daftar');
+    Route::get('/login','LoginController@index')->name('login');
     
     Route::prefix('admin')->namespace('Admin')->group(function(){
         Route::get('/','DashboardController@index')->name('dashboard');
         Route::get('/hidangan','HidanganController@index')->name('hidangan');
         Route::get('/hidangan-baru','HidanganBaruController@index')->name('hidanganbaru');
         Route::get('/kategori-baru','KategoriBaruController@index')->name('kategoribaru');
+        Route::get('/reservasi','ReservasiMejaController@index')->name('reservasi');
+        Route::get('/meja-baru','MejaBaruController@index')->name('mejabaru');
+        Route::get('/kategori-meja','KategoriMejaController@index')->name('kategorimeja');
+        Route::get('/riwayat-meja','RiwayatMejaController@index')->name('riwayatmeja');
+        Route::get('/riwayat-pesanan','RiwayatPesananController@index')->name('riwayatpesanan');
+        Route::get('/hubungi-kami','HubungiController@index')->name('hubungikami');
+        Route::get('/pusat-bantuan','PusatBantuanController@index')->name('pusatbantuan');
     });
 });
 
