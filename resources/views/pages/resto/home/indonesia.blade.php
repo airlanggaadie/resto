@@ -17,7 +17,7 @@
         <div class="col-12 my-4 text-center">
             <form action="">
                 <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
-                <select name="" id="" style="display: inline-block; width: 200px;">
+                <select class="form-control" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
                     <option value=""><a href="#">Indonesia</a></option>
                     <option value=""><a href="#">Malaysia</a></option>
                     <option value=""><a href="#">Singapore</a></option>
