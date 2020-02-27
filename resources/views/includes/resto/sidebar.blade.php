@@ -117,7 +117,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Bantuan</h6>
                 <a class="collapse-item" href="utilities-color.html">Pusat Bantuan</a>
-                <a class="collapse-item" href="utilities-border.html">Hubungi Ber-bariS</a>
+                <a class="collapse-item" href="{{route('hubungikami')}}">Hubungi Ber-bariS</a>
             </div>
         </div>
     </li>
