@@ -12,7 +12,7 @@
                 <form action="#">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Nama Kategori Meja</label>
-                      <input type="text" class="form-control" placeholder="Mis: Normal,VIP,VVIP.">
+                      <input type="text" class="form-control" placeholder="Mis: Normal, VIP, VVIP.">
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Buat Kategori</button>

@@ -85,8 +85,8 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pengaturan Meja</h6>
-                <a class="collapse-item" href="utilities-color.html">Tambah Meja Baru</a>
-                <a class="collapse-item" href="utilities-border.html">Tambah Kategori Meja</a>
+                <a class="collapse-item" href="{{route('mejabaru')}}">Tambah Meja Baru</a>
+                <a class="collapse-item" href="{{route('kategorimeja')}}">Tambah Kategori Meja</a>
             </div>
         </div>
     </li>

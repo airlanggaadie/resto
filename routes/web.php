@@ -68,6 +68,8 @@ Route::prefix('resto')->namespace('Resto')->group(function(){
         Route::get('/hidangan-baru','HidanganBaruController@index')->name('hidanganbaru');
         Route::get('/kategori-baru','KategoriBaruController@index')->name('kategoribaru');
         Route::get('/reservasi','ReservasiMejaController@index')->name('reservasi');
+        Route::get('/meja-baru','MejaBaruController@index')->name('mejabaru');
+        Route::get('/kategori-meja','KategoriMejaController@index')->name('kategorimeja');
     });
 });
 

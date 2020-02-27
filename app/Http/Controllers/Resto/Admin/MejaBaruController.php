@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Resto\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ReservasiMejaController extends Controller
+class MejaBaruController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ReservasiMejaController extends Controller
      */
     public function index()
     {
-        return view('pages.resto.reservasimeja');
+        return view('pages.resto.tambah-meja.meja');
     }
 
     /**
