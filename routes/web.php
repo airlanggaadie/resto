@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.resto.tambah-meja.kategori-meja.kategorimeja');
+    return view('pages.resto.bantuan.hubungi');
 });
 
 Auth::routes();
