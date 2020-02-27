@@ -11,18 +11,30 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Booking extends Model
 {
-    protected $booking = 'booking';
+    use SoftDeletes;
+    
+    protected $table = 'bookings';
 
-    public function users()
+    protected $fillable = [
+        'users_id','tables_id','check_in','time','menu_id'
+    ];
+
+    public function user()
     {
         return $this->belongsTo(User::class,'users_id');
     }
 
-    public function tables()
+    public function table()
     {
-        return $this->belongsTo(TAbles::class,'tables_id');
+        return $this->belongsTo(Tables::class,'tables_id');
+    }
+
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class,'menu_id');
     }
 }
