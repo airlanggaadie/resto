@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="container card">
+        <h1 class="text-center mb-5 mt-3">Daftar Meja</h1>
         <div class="row text-center">
             <div class="col-3">
                 <a href="#">

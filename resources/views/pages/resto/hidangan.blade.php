@@ -5,6 +5,7 @@
 @section('content')
 
     <div class="container">
+        <h1 class="text-center mb-5 mt-3" >Daftar Menu</h1>
         <div class="row">
             <div class="col-12">
 
