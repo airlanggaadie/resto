@@ -13,14 +13,17 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('admin')->namespace('Admin')->group(function(){
+Route::prefix('admin')->namespace('Admin')->middleware(['role:administrator'])->group(function(){
     Route::get('/','DashboardController@index')->name('admin-dashboard');
+
+    Route::get('administrator/status','AdministratorController@status')->name('admin-status');
+    Route::Resource('administrator','AdministratorController');
 
     Route::prefix('user')->group(function(){
         Route::get('/','UserController@index');
@@ -54,7 +57,7 @@ Route::prefix('admin')->namespace('Admin')->group(function(){
 Route::prefix('resto')->namespace('Resto')->group(function(){
     Route::get('/','HomeController@index')->name('home');
     Route::get('/daftar','DaftarController@index')->name('daftar');
-    Route::get('/login','LoginController@index')->name('login');
+    Route::get('/login','LoginController@index')->name('login-');
     
     Route::prefix('admin')->namespace('Admin')->group(function(){
         Route::get('/','DashboardController@index')->name('dashboard');
