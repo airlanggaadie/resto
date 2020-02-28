@@ -37,6 +37,7 @@ class UserSeeder extends Seeder
         $administrator->gender = 'L';
         $administrator->email = 'administrator@email.com';
         $administrator->password = bcrypt('12345');
+        $administrator->is_online = true;
         $administrator->save();
         $administrator->attachRole($administratorRole);
 
@@ -46,6 +47,7 @@ class UserSeeder extends Seeder
         $owner->gender = 'L';
         $owner->email = 'owner@email.com';
         $owner->password = bcrypt('23456');
+        $owner->is_online = true;
         $owner->save();
         $owner->attachRole($ownerRole);
         
@@ -55,6 +57,7 @@ class UserSeeder extends Seeder
         $customer->gender = 'W';
         $customer->email = 'customer@email.com';
         $customer->password = bcrypt('34567');
+        $customer->is_online = true;
         $customer->save();
         $customer->attachRole($customerRole);
     }

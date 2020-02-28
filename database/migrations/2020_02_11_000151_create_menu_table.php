@@ -24,8 +24,9 @@ class CreateMenuTable extends Migration
         });
 
         Schema::create('menu_bookings', function (Blueprint $table) {
-            $table->unsignedInteger('menu_id');
-            $table->unsignedInteger('booking_id');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('menu_id');
+            $table->unsignedBigInteger('booking_id');
 
             $table->foreign('menu_id')->references('id')->on('menu');
             $table->foreign('booking_id')->references('id')->on('bookings');
@@ -40,6 +41,6 @@ class CreateMenuTable extends Migration
     public function down()
     {
         Schema::dropIfExists('menu');
-        Schema::dropIfExists('menu_booking');
+        Schema::dropIfExists('menu_bookings');
     }
 }
