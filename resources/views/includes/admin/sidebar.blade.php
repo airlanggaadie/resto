@@ -11,7 +11,7 @@
 
   <!-- Nav Item - Dashboard -->
     <li class="nav-item @yield('dashboard')">
-        <a class="nav-link" href=" {{ route('dashboard') }} ">
+        <a class="nav-link" href=" {{ route('admin-dashboard') }} ">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
@@ -55,17 +55,17 @@
 
     <hr class="sidebar-divider">
 
-    <li class="nav-item @yield('restaurant')">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actionResto"
+    <li class="nav-item @yield('administrator')">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actionAdmin"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Administrator</span>
         </a>
-        <div id="actionResto" class="collapse" aria-labelledby="headingUtilities"
+        <div id="actionAdmin" class="collapse" aria-labelledby="headingUtilities"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">            
-                <a class="collapse-item" href="">Status</a>
-                <a class="collapse-item" href="">Data</a>
+                <a class="collapse-item" href="{{ route('admin-status') }}">Status</a>
+                <a class="collapse-item" href="{{ route('administrator.index') }}">Data</a>
             </div>
         </div>
     </li>
