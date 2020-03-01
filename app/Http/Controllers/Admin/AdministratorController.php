@@ -3,17 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Repository\UserRepository;
 use App\User;
 use Illuminate\Http\Request;
 
-
-class UserController extends Controller
+class AdministratorController extends Controller
 {
-    private $repo;
-
-    public function __construct(UserRepository $user) {
-        $this->repo = $user;
+    public function status()
+    {
+        return view('pages.administrator.admin.status',[
+            'admin' => User::whereRoleIs('administrator')->where('is_online',true)->count()
+        ]);
     }
     /**
      * Display a listing of the resource.
@@ -22,10 +21,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        // $user = Role::with('user')->where('name','administrator')->get();    
-        $d = User::whereRoleIs('customer')->paginate(5);
-        return view('pages.admin.user.index',[
-            'user' => $d
+        return view('pages.administrator.admin.index',[
+            'admin' => User::whereRoleIs('administrator')->paginate(5)
         ]);
     }
 
@@ -36,8 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $user = null;
-        return view('pages.admin.user.form',compact('user'));
+        //
     }
 
     /**
@@ -48,15 +44,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = $this->repo->insert([
-            'name' => $request->get('name'),
-            'phonenumber' => $request->get('phonenumber'),
-            'gender' => $request->get('gender'),
-            'email' => $request->get('email'),
-            'password' => $request->get('password'),
-        ]);
-            
-        return redirect('user')->with(['success' => 'Data berhasil di create']);
+        //
     }
 
     /**
@@ -67,7 +55,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**
@@ -78,8 +66,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = $this->repo->show($id);
-        return view('pages.admin.user.form',compact('user'));
+        //
     }
 
     /**
@@ -91,14 +78,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = $this->repo->update($id,[
-            'name'=>$request->get('name'),
-            'phonenumber'=>$request->get('phonenumber'),
-            'gender'=>$request->get('gender'),
-            'email'=>$request->get('email'),
-            'password'=>$request->get('password')
-        ]);
-        return redirect('user');
+        //
     }
 
     /**
@@ -109,7 +89,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $this->repo->delete($id);
-        return redirect('user');
+        //
     }
 }

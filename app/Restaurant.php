@@ -9,10 +9,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Restaurant extends Model
 {
+    use SoftDeletes;
+    
     protected $resto = 'restaurant';
+
+    protected $fillable = [
+        'name','alamat','phonenumber'
+    ];
 
     public function tables()
     {

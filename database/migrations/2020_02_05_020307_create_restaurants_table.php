@@ -18,6 +18,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('name'); // nama restonya
             $table->string('alamat'); // alamat resto
             $table->string('phonenumber'); // nomor yg bisa dihubungi
+            $table->softDeletes();
             $table->timestamps();
         });
     }

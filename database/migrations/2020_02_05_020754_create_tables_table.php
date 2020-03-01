@@ -18,6 +18,7 @@ class CreateTablesTable extends Migration
             $table->unsignedBigInteger('restaurants_id'); // mendeklarasikan table ini milik resto apa
             $table->string('name'); // nama tablesnya (table couple , family, dll)
             $table->string('description'); // deskripsikan tablenya (untuk 2 orang, untuk 10 orang, dll)
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('restaurants_id')->references('id')->on('restaurants');

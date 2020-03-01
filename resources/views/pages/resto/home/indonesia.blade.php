@@ -33,7 +33,7 @@
                 </select>
             </form> --}}
 
-            <form action="" id="demoDefaultSelection">
+            {{-- <form action="" id="demoDefaultSelection">
                 <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
                 <select class="selectpicker select" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
                     <option value="" data-imagesrc="{{url('frontend/img/flag/indonesiaflag.png')}}"><a href="#"><img src="{{url('frontend/img/flag/indonesiaflag.png')}}" width="25px" 
@@ -49,7 +49,27 @@
                     <option value=""><a href="#"><img src="{{url('frontend/img/flag/vietnamflag.png')}}" width="25px"
                         height="15px" alt="Ber-bariS"> Vietnam</a></option>
                 </select>
-            </form>
+            </form> --}}
+
+            <div class="dropdown">
+                <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
+                <button id="my-dropdown" class="btn btn-light px-0 py-0 border border-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-item px-2" href="{{route('home')}}"><img src="{{url('frontend/img/flag/indonesiaflag.png')}}" width="25px" 
+                        height="15px" alt="Ber-bariS"> Indonesia</a>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="my-dropdown">
+                    <a class="dropdown-item px-2" href="#"><img src="{{url('frontend/img/flag/malaysiaflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Malaysia</a>
+                    <a class="dropdown-item px-2" href="#"><img src="{{url('frontend/img/flag/Singaporeflag.svg')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Singapore</a>
+                    <a class="dropdown-item px-2" href="#"><img src="{{url('frontend/img/flag/philippinesflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Philippines</a>
+                    <a class="dropdown-item px-2" href="#"><img src="{{url('frontend/img/flag/thailandflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Thailand</a>
+                    <a class="dropdown-item px-2" href="#"><img src="{{url('frontend/img/flag/vietnamflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Vietnam</a>
+                </div>
+            </div>
 
         <a href="{{ route('login') }}">
                 <button class="btn btn-light border-dark"

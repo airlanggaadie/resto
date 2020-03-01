@@ -19,6 +19,8 @@ class CreateBookingsTable extends Migration
             $table->unsignedBigInteger('tables_id'); // tables yang dipesan berdasarkan table yang sudah didaftarkan
             $table->date('check_in'); // booking untuk tanggal?
             $table->time('time'); // booking untuk jam?
+            $table->text('status'); // pending/success/done
+            $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('users_id')->references('id')->on('users');
