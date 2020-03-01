@@ -35,7 +35,7 @@
 
             <form action="" id="demoDefaultSelection">
                 <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
-                <select class="selectpicker" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
+                <select class="selectpicker select" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
                     <option value="" data-imagesrc="{{url('frontend/img/flag/indonesiaflag.png')}}"><a href="#"><img src="{{url('frontend/img/flag/indonesiaflag.png')}}" width="25px" 
                         height="15px" alt="Ber-bariS"> Indonesia</a></option>
                     <option value=""><a href="#"><img src="{{url('frontend/img/flag/malaysiaflag.png')}}" width="25px"

@@ -17,6 +17,8 @@
     <link href="{{ url('contoh/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ url('FrontEnd/img/20200129_154329_0000.png')}}">
 
+    <link rel="stylesheet" href="{{url('css/selectnone.css')}}">
+
     
 </head>
 <body>
