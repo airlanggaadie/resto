@@ -56,6 +56,7 @@ Route::prefix('admin')->namespace('Admin')->middleware(['role:administrator'])->
 
 Route::prefix('resto')->namespace('Resto')->group(function(){
     Route::get('/','HomeController@index')->name('home');
+    Route::get('/malaysia','MalaysiaHomeController@index')->name('malaysiahome');
     Route::get('/daftar','DaftarController@index')->name('daftar');
     Route::get('/login','LoginController@index')->name('login-');
     

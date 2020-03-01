@@ -58,7 +58,7 @@
                         height="15px" alt="Ber-bariS"> Indonesia</a>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="my-dropdown">
-                    <a class="dropdown-item px-2" href="#"><img src="{{url('frontend/img/flag/malaysiaflag.png')}}" width="25px"
+                    <a class="dropdown-item px-2" href="{{route('malaysiahome')}}"><img src="{{url('frontend/img/flag/malaysiaflag.png')}}" width="25px"
                         height="15px" alt="Ber-bariS"> Malaysia</a>
                     <a class="dropdown-item px-2" href="#"><img src="{{url('frontend/img/flag/Singaporeflag.svg')}}" width="25px"
                         height="15px" alt="Ber-bariS"> Singapore</a>
