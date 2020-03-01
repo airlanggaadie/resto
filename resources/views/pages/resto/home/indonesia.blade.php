@@ -15,15 +15,39 @@
                 Masuk untuk mulai Ber-bisniS.</h6>
         </div>
         <div class="col-12 my-4 text-center">
-            <form action="">
+            {{-- <form action="">
                 <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
-                <select class="form-control" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
-                    <option value=""><a href="#">Indonesia</a></option>
-                    <option value=""><a href="#">Malaysia</a></option>
-                    <option value=""><a href="#">Singapore</a></option>
-                    <option value=""><a href="#">Philippines</a></option>
-                    <option value=""><a href="#">Thailand</a></option>
-                    <option value=""><a href="#">Vietnam</a></option>
+                <select class="form-control selectpicker" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
+                    <option value="" data-thumbnail="{{url('frontend/img/flag/indonesiaflag.png')}}"><a href="#"><img src="{{url('frontend/img/flag/indonesiaflag.png')}}" width="25px" 
+                        height="15px" alt="Ber-bariS"> Indonesia</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/malaysiaflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Malaysia</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/Singaporeflag.svg')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Singapore</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/philippinesflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Philippines</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/thailandflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Thailand</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/vietnamflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Vietnam</a></option>
+                </select>
+            </form> --}}
+
+            <form action="" id="demoDefaultSelection">
+                <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
+                <select class="selectpicker" name="nama-negara" id="nama-negara" style="display: inline-block; width: 200px;">
+                    <option value="" data-imagesrc="{{url('frontend/img/flag/indonesiaflag.png')}}"><a href="#"><img src="{{url('frontend/img/flag/indonesiaflag.png')}}" width="25px" 
+                        height="15px" alt="Ber-bariS"> Indonesia</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/malaysiaflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Malaysia</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/Singaporeflag.svg')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Singapore</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/philippinesflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Philippines</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/thailandflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Thailand</a></option>
+                    <option value=""><a href="#"><img src="{{url('frontend/img/flag/vietnamflag.png')}}" width="25px"
+                        height="15px" alt="Ber-bariS"> Vietnam</a></option>
                 </select>
             </form>
 

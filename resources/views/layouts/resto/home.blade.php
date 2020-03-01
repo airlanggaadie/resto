@@ -11,10 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template-->
     <link href="{{ url('contoh/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link rel="icon" href="{{ url('FrontEnd/img/20200129_154329_0000.png')}}">
+
+    
 </head>
 <body>
 
@@ -49,4 +52,23 @@
 <!-- Page level custom scripts -->
 <script src="{{ url('contoh/js/demo/chart-area-demo.js') }} "></script>
 <script src="{{ url('contoh/js/demo/chart-pie-demo.js') }}"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+
+<script>
+    $('#demoDefaultSelection').ddslick({
+    data: ddData,
+    defaultSelectedIndex:2
+});
+</script>
 </html>
