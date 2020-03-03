@@ -7,7 +7,7 @@
             <i class="fas fa-laugh-wink"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Ber-bariS</div> -->
-        <img src="{{ url('frontend/img/berbaris-1.png') }}" style="width: 150px;" alt="ber-baris">
+        <img src="{{ url('frontend/img/berbaris-3.png') }}" style="width: 150px;" alt="ber-baris">
     </a>
 
     <!-- Divider -->

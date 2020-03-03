@@ -53,7 +53,7 @@
 
             <div class="dropdown">
                 <p style="display: inline-block;">Saya memulai Ber-bisniS di</p>
-                <button id="my-dropdown" class="btn btn-light px-0 py-0 border border-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="my-dropdown" class="btn btn-light px-0 py-0 border border-primary" style="border-radius:10px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <a class="dropdown-item px-2" href="{{route('home')}}"><img src="{{url('frontend/img/flag/indonesiaflag.png')}}" width="25px" 
                         height="15px" alt="Ber-bariS"> Indonesia</a>
                 </button>

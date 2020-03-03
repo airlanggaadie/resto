@@ -17,7 +17,7 @@
         <div class="col-12 my-4 text-center">
             <div class="dropdown">
                 <p style="display: inline-block;">Saya mula menjalankan perniagaan</p>
-                <button id="my-dropdown" class="btn btn-light px-0 py-0 border border-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="my-dropdown" class="btn btn-light px-0 py-0 border border-primary" style="border-radius:10px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <a class="dropdown-item px-2" href="{{route('malaysiahome')}}"><img src="{{url('frontend/img/flag/malaysiaflag.png')}}" width="25px"
                         height="15px" alt="Ber-bariS"> Malaysia</a>
                 </button>
